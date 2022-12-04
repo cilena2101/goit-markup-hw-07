@@ -1,0 +1,86 @@
+.page-header {
+	border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+	margin-right: 92px;
+	text-decoration: none;
+	color: var(--accent-color);
+
+	font-family: Raleway, sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+
+	.accent {
+		color: var(--accent-color-black);
+	}
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+}
+
+.site-nav {
+	display: flex;
+	gap: 50px;
+
+	.link {
+		display: block;
+	
+		padding-top: 32px;
+		padding-bottom: 32px;
+	
+		color: var(--title-text-color);		
+	}
+}
+
+.site-nav-item {
+	position: relative;
+
+	&::after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	
+		width: 100%;
+		height: 4px;
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	}
+}
+
+.site-nav .link,
+.auth-nav .link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.17;
+	letter-spacing: 0.02em;
+
+	&.current,
+	&:hover,
+	&:focus {
+	color: var(--accent-color);
+}
+}
+
+.auth-nav {
+	display: flex;
+	margin-left: auto;
+
+	&-item:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	&-icon {
+		margin-right: 10px;
+		fill: currentColor;
+	}	
+	&-link {
+		display: flex;
+		align-items: center;
+	}
+}
